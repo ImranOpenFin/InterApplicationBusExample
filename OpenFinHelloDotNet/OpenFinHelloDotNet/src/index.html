@@ -1,0 +1,18 @@
+<html>
+	<head>
+	<script>
+	document.addEventListener('DOMContentLoaded', () => {
+	    fin.desktop.main(() => {
+		    console.log("openfin ready...");
+		    fin.desktop.InterApplicationBus.subscribe('*', 'OpenFinTopic', (m)=>{
+			    console.log("A message from the .NET Application :" , m);
+		    }, ()=>{ console.log('OpenFinTopic subscribed')});
+	    });
+        });
+	</script>
+	</head>
+	<body>
+		<h4>IAB host App</h4>
+		<hr/>
+	</body>
+</html>
